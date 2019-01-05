@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4EE25F7C-5164-DFF5-9800-D4DAFD3F285F}</ProjectGuid>
+    <ProjectGuid>{01BC9104-1A49-8ECD-3146-6023B9CA2AFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +60,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BabyCubeController.cs" />
+    <Compile Include="Assets\EnemySpawning.cs" />
+    <Compile Include="Assets\GunController.cs" />
     <Compile Include="Assets\MyPlayerController.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshComponentsGUIUtility.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshLinkEditor.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshModifierEditor.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshModifierVolumeEditor.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshSurface.cs" />
+    <Compile Include="Assets\NavMesh\NavMeshSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -365,19 +377,19 @@
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -581,19 +593,19 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/BinXu/Documents/Project Hypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Nykidxxx/Documents/VR Projects/projecthypnos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -943,15 +955,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{FF6F48C6-84F7-5B11-06E9-486C456AA18B}</Project>
+      <Project>{7CE4869B-6978-CA3B-210C-7EFF32155720}</Project>
       <Name>Oculus.VR.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{9A6DA0E7-64D9-814E-83D5-15277BBDCA05}</Project>
+      <Project>{F7674F9F-BD16-122E-0E75-0366473087FA}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{C93065C3-0BFE-3B5F-7956-324AD7F56A06}</Project>
+      <Project>{0D2236C3-A66F-92C5-12B2-BF8545926BB3}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
   </ItemGroup>
