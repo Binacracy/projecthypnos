@@ -9,6 +9,9 @@ public class GunController : MonoBehaviour
 
     public Transform gunBarrelTransform;
 
+    public float timeBetweenAttacks = 1.0f;
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +22,21 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
+        timer += Time.deltaTime;
+
+        if (timer >= timeBetweenAttacks && OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
         {
-            audioSource.Play();
+            //audioSource.Play();
             RaycastGun();
+
         }
+        
     }
 
     private void RaycastGun()
     {
+        timer = 0f;
+
         RaycastHit hit;
 
         if (Physics.Raycast(gunBarrelTransform.position, gunBarrelTransform.forward, out hit))
