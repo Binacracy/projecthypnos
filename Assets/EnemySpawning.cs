@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemySpawning : MonoBehaviour
 {
     public GameObject[] enemies;
-    public Vector3 spawnValues;
+    public Vector3 spawnRadius;
     public Vector3 spawnCenter;
-    public float spawnWait;
-    public float spawnMostWait;
-    public float spawnLeastWait;
     public int startWait;
+    public float spawnWaitMax;
+    public float spawnWaitMin;
+    float spawnWait;
+    public float spawnMaximum;
 
     int randEnemy;
 
@@ -18,25 +19,30 @@ public class EnemySpawning : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawner());
+
+        spawnWait = Random.Range(spawnWaitMin, spawnWaitMax);
     }
 
     // Update is called once per frame
     void Update()
     {
-        spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+
     }
 
     IEnumerator Spawner()
     {
         yield return new WaitForSeconds(startWait);
 
-        while (true)
-        {
-            randEnemy = Random.Range(0, 2);
+        int i = 0;
 
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z));
+        while (spawnMaximum > i)
+        {
+            randEnemy = Random.Range(0, enemies.Length);
+
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnRadius.x, spawnRadius.x), Random.Range(-spawnRadius.y, spawnRadius.y), Random.Range(-spawnRadius.z, spawnRadius.z));
 
             Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(spawnCenter.x, spawnCenter.y, spawnCenter.z), gameObject.transform.rotation);
+            i++;
 
             yield return new WaitForSeconds(spawnWait);
         }
