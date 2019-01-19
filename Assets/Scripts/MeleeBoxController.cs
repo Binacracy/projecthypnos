@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ShooterBoxController : MonoBehaviour
+public class MeleeBoxController : MonoBehaviour
 {
     Transform target;
     public NavMeshAgent agent;
@@ -17,32 +17,14 @@ public class ShooterBoxController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent.SetDestination(target.transform.position);
-        positionChangeTimer = 200;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.transform.position, transform.position);
-
         FaceTarget();
 
-        if (distance < 20 && positionChangeTimer == 200)
-        {
-            xPositionChange = Random.Range(-40, 40);
-            zPositionChange = Random.Range(-40, 40);
-
-            newPosition = new Vector3(target.transform.position.x + xPositionChange, 0, target.transform.position.z + zPositionChange);
-            agent.SetDestination(newPosition);
-        }
-        else if (positionChangeTimer == 100)
-        {
-            agent.SetDestination(target.transform.position);
-            positionChangeTimer = 310;
-        }
-        positionChangeTimer--;
-        print(positionChangeTimer);
-
+        agent.SetDestination(target.transform.position);
     }
 
     void FaceTarget()

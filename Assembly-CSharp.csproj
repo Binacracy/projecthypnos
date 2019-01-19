@@ -60,11 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BabyCubeController.cs" />
-    <Compile Include="Assets\EnemyAttack.cs" />
-    <Compile Include="Assets\EnemySpawning.cs" />
-    <Compile Include="Assets\GunController.cs" />
-    <Compile Include="Assets\MyPlayerController.cs" />
     <Compile Include="Assets\NavMesh\NavMeshComponentsGUIUtility.cs" />
     <Compile Include="Assets\NavMesh\NavMeshLink.cs" />
     <Compile Include="Assets\NavMesh\NavMeshLinkEditor.cs" />
@@ -351,10 +346,17 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
-    <Compile Include="Assets\PlayerManager.cs" />
     <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
-    <Compile Include="Assets\ShooterBoxController.cs" />
+    <Compile Include="Assets\Scripts\BabyCubeController.cs" />
+    <Compile Include="Assets\Scripts\BulletInstantiator.cs" />
+    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawning.cs" />
+    <Compile Include="Assets\Scripts\GunController.cs" />
+    <Compile Include="Assets\Scripts\MeleeBoxController.cs" />
+    <Compile Include="Assets\Scripts\MyPlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\ShooterBoxController.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />

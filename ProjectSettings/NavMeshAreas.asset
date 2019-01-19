@@ -89,10 +89,10 @@ NavMeshProjectSettings:
       m_Flags: 0
   - serializedVersion: 2
     agentTypeID: -1372625422
-    agentRadius: 0.2
-    agentHeight: 1
-    agentSlope: 45
-    agentClimb: 0.4
+    agentRadius: 1
+    agentHeight: 0.5
+    agentSlope: 0
+    agentClimb: 0.001
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -105,10 +105,10 @@ NavMeshProjectSettings:
       m_Flags: 0
   - serializedVersion: 2
     agentTypeID: -334000983
-    agentRadius: 1
-    agentHeight: 1
-    agentSlope: 24.8
-    agentClimb: 0.4
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 0
+    agentClimb: 0.001
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -121,5 +121,5 @@ NavMeshProjectSettings:
       m_Flags: 0
   m_SettingNames:
   - Humanoid
-  - Baby cube
+  - MeleeBox
   - ShooterBox
