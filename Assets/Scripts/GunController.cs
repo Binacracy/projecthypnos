@@ -24,7 +24,7 @@ public class GunController : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= timeBetweenAttacks && OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
+        if (timer >= timeBetweenAttacks && OVRInput.Get(OVRInput.Button.SecondaryHandTrigger) || Input.GetButtonDown("Fire1"))
         {
             //audioSource.Play();
             RaycastGun();
