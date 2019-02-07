@@ -44,7 +44,7 @@ public class ShooterBoxController : MonoBehaviour
             positionChangeTimer = 210;
         }
         positionChangeTimer--;
-        print(positionChangeTimer);
+        //print(positionChangeTimer);
 
     }
 
